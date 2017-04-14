@@ -16,10 +16,3 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "testproject.settings")
 application = get_wsgi_application()
 from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
-
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "static"),
-    ]
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
